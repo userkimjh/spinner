@@ -1,9 +1,7 @@
-let time = 100;
 const spinner = ['|', '/', '-', '\\', '|', '/', '-', '\\', '|']
 
-spinner.forEach((spinnerIcon) => {
+spinner.forEach((spinnerIcon, index) => {
   setTimeout(() => {
     process.stdout.write(`\r${spinnerIcon}   `)
-  }, time)
-  time += 300
+  }, 100 + 200 * index)
 });
